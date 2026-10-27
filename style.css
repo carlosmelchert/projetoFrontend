@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-/* Reset e Utilitários */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +17,6 @@
   min-height: 100vh;
 }
 
-/* Títulos e Containers */
 .titulo {
   width: 100%;
   min-height: 5vh;
@@ -52,7 +50,6 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Painel de Filtros do Feed */
 .painel-filtros {
   width: 100%;
   display: flex;
@@ -75,7 +72,6 @@
   flex: 1;
 }
 
-/* Tabela */
 .tabela-container {
   width: 100%;
 }
@@ -115,7 +111,6 @@ th:first-child, td:first-child {
   margin-top: 20px;
 }
 
-/* Formulários */
 .formulario {
   display: flex;
   flex-direction: column;
@@ -148,7 +143,6 @@ th:first-child, td:first-child {
   font-family: Arial, sans-serif;
 }
 
-/* Container das opções de área */
 .opcoes-checkboxes {
   display: flex;
   flex-wrap: wrap;
@@ -158,7 +152,6 @@ th:first-child, td:first-child {
   border: none;
 }
 
-/* Transforma o label em um botão clicável estilo Tag/Pill */
 .opcoes-checkboxes label {
   font-weight: 600;
   font-size: 0.85rem;
@@ -175,18 +168,15 @@ th:first-child, td:first-child {
   user-select: none;
 }
 
-/* Esconde o quadradinho nativo do checkbox */
 .opcoes-checkboxes input[type="checkbox"] {
   display: none;
 }
 
-/* Efeito ao passar o mouse */
 .opcoes-checkboxes label:hover {
   border-color: #28a745;
   background-color: #f8f9fa;
 }
 
-/* Quando a opção é selecionada (checkbox marcado) */
 .opcoes-checkboxes label:has(input[type="checkbox"]:checked) {
   background-color: #28a745;
   color: #ffffff;
@@ -222,7 +212,6 @@ th:first-child, td:first-child {
   font-family: Arial, sans-serif;
 }
 
-/* Botões */
 .form-acoes {
   display: flex;
   justify-content: space-between;
@@ -283,6 +272,7 @@ th:first-child, td:first-child {
 .btn-cancelar:hover {
   color: #000000;
 }
+
 @media (max-width: 768px) {
   .lista, 
   .form-container {

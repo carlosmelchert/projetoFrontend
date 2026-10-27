@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. GERAR ID E DATA AUTOMATICAMENTE (Se estiver em formulários)
   const campoId = document.getElementById('id-input');
   const campoData = document.getElementById('data-input');
 
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     campoData.value = new Date().toLocaleDateString('pt-BR');
   }
 
-  // 2. CONTADORES DE CARACTERES EM TEMPO REAL
   const inputTitulo = document.getElementById('titulo-input');
   const contadorTitulo = document.getElementById('contador-titulo');
   const inputConteudo = document.getElementById('conteudo-input');
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. SALVAR NOVA ATUALIZAÇÃO
   const formularioCriar = document.querySelector('.formulario:not(#form-editar)');
 
   if (formularioCriar && document.querySelector('button[type="submit"]')) {
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. EXIBIR E FILTRAR NO FEED (CORRIGIDO PARA 6 COLUNAS EXATAS)
   const tabelaBody = document.querySelector('tbody');
   const filtroBusca = document.getElementById('filtro-busca');
   const filtroArea = document.getElementById('filtro-area');
@@ -110,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarTabela();
   }
 
-  // 5. CARREGAR DADOS EM DETALHES + BOTÃO EXCLUIR FUNCIONAL
   const btnExcluir = document.getElementById('btn-excluir');
   const btnEditarLink = document.getElementById('btn-editar-link');
 
@@ -133,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btnEditarLink.href = `editar-atualizacao.html?id=${encodeURIComponent(item.id)}`;
       }
 
-      // Ação do Botão Excluir
       if (btnExcluir) {
         btnExcluir.addEventListener('click', () => {
           if (confirm('Tem certeza que deseja excluir esta atualização permanentemente?')) {
@@ -146,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 6. EDITAR ATUALIZAÇÃO
   const formEditar = document.getElementById('form-editar');
 
   if (formEditar) {
