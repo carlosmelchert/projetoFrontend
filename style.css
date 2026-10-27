@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Reset e Utilitários */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.telacheia {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Títulos e Containers */
+.titulo {
+  width: 100%;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo Black", sans-serif; 
+  font-weight: 400;                         
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.lista {
+  width: 85%;
+  min-height: 80vh;
+  border-radius: 15px;
+  background: linear-gradient(to right, #d6e6ff, #fcfafa, #dfffe2);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #d6e6ff, #fcfafa, #dfffe2);
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Painel de Filtros do Feed */
+.painel-filtros {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.painel-filtros input,
+.painel-filtros select {
+  padding: 10px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+#filtro-busca {
+  flex: 1;
+}
+
+/* Tabela */
+.tabela-container {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #000000;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+th:first-child, td:first-child {
+  width: 60px;
+  text-align: center;
+}
+
+.coluna-acao {
+  text-align: center;
+  width: 100px;
+}
+
+.rodape-acoes {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Formulários */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label-com-contador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.campo-grupo label {
+  font-weight: bold;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.contador {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-family: Arial, sans-serif;
+}
+
+/* Container das opções de área */
+.opcoes-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* Transforma o label em um botão clicável estilo Tag/Pill */
+.opcoes-checkboxes label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: Arial, sans-serif;
+  color: #495057;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Esconde o quadradinho nativo do checkbox */
+.opcoes-checkboxes input[type="checkbox"] {
+  display: none;
+}
+
+/* Efeito ao passar o mouse */
+.opcoes-checkboxes label:hover {
+  border-color: #28a745;
+  background-color: #f8f9fa;
+}
+
+/* Quando a opção é selecionada (checkbox marcado) */
+.opcoes-checkboxes label:has(input[type="checkbox"]:checked) {
+  background-color: #28a745;
+  color: #ffffff;
+  border-color: #28a745;
+  box-shadow: 0 2px 6px rgba(40, 167, 69, 0.25);
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.campo-grupo input.campo-desabilitado,
+.campo-grupo textarea.campo-desabilitado {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #d6d8db;
+  resize: none;
+}
+
+.campo-grupo small {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Botões */
+.form-acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.grupo-botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-acessar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.btn-acessar:hover {
+  background-color: #218838;
+}
+
+.btn-perigo {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-perigo:hover {
+  background-color: #c82333;
+}
+
+.btn-cancelar {
+  color: #555555;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.btn-cancelar:hover {
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .lista, 
+  .form-container {
+    width: 95%;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .titulo h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .painel-filtros {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tabela-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .opcoes-checkboxes {
+    justify-content: center;
+  }
+
+  .opcoes-checkboxes label {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .form-acoes {
+    flex-direction: column-reverse;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .grupo-botoes {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-acessar, 
+  .btn-perigo, 
+  .btn-cancelar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rodape-acoes {
+    justify-content: center;
+  }
+}
