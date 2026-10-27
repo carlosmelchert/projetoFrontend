@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes da Atualização</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="telacheia centralizado">
+    <div class="form-container">
+      
+      <div class="titulo">
+        <h2>Detalhes da Atualização</h2>
+      </div>
+
+      <div class="formulario">
+        <div class="campo-grupo">
+          <label for="id-input">ID da Atualização</label>
+          <input type="text" id="id-input" class="campo-desabilitado" readonly>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="titulo-input">Título</label>
+          <input type="text" id="titulo-input" class="campo-desabilitado" readonly>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="area-input">Área(s)</label>
+          <input type="text" id="area-input" class="campo-desabilitado" readonly>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="conteudo-input">Conteúdo</label>
+          <textarea id="conteudo-input" rows="5" class="campo-desabilitado" readonly></textarea>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="data-input">Data de Publicação</label>
+          <input type="text" id="data-input" class="campo-desabilitado" readonly>
+        </div>
+
+        <!-- Botões de Ação com Excluir e Editar -->
+        <div class="form-acoes">
+          <a href="feed.html" class="btn-cancelar">Voltar ao Feed</a>
+          <div class="grupo-botoes">
+            <button id="btn-excluir" class="btn-perigo">Excluir</button>
+            <a id="btn-editar-link" href="#" class="btn-acessar">Editar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

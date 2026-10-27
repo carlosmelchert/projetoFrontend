@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Atualização</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="telacheia centralizado">
+    <div class="form-container">
+      
+      <div class="titulo">
+        <h2>Editar Atualização</h2>
+      </div>
+
+      <form id="form-editar" class="formulario">
+        <div class="campo-grupo">
+          <label for="id-input">ID da Atualização</label>
+          <input type="text" id="id-input" class="campo-desabilitado" readonly>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="label-com-contador">
+            <label for="titulo-input">Título *</label>
+            <span class="contador" id="contador-titulo">0 / 50</span>
+          </div>
+          <input 
+            type="text" 
+            id="titulo-input" 
+            maxlength="50" 
+            placeholder="Digite o título" 
+            required
+          >
+        </div>
+
+        <div class="campo-grupo">
+          <label>Áreas * (Selecione pelo menos uma)</label>
+          <div class="opcoes-checkboxes">
+            <label><input type="checkbox" name="areas" value="GI & Fin"> GI & Fin</label>
+            <label><input type="checkbox" name="areas" value="Pessoas"> Pessoas</label>
+            <label><input type="checkbox" name="areas" value="Projetos"> Projetos</label>
+            <label><input type="checkbox" name="areas" value="Marketing"> Marketing</label>
+            <label><input type="checkbox" name="areas" value="Mercado"> Mercado</label>
+          </div>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="label-com-contador">
+            <label for="conteudo-input">Conteúdo *</label>
+            <span class="contador" id="contador-conteudo">0 / 1000</span>
+          </div>
+          <textarea 
+            id="conteudo-input" 
+            rows="5" 
+            maxlength="1000" 
+            placeholder="Escreva o conteúdo..." 
+            required
+          ></textarea>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="data-input">Data de Publicação</label>
+          <input type="text" id="data-input" class="campo-desabilitado" readonly>
+        </div>
+
+        <div class="form-acoes">
+          <a href="feed.html" class="btn-cancelar">Cancelar</a>
+          <button type="submit" class="btn-acessar">Salvar Alterações</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
